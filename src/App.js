@@ -1,10 +1,11 @@
+import MainPage from "./Page/MainPage/MainPage";
 
 function App() {
   return (
-    <div className="App">
-      <h1 className="text-3xl font-bold underline">
-        Hello world!
-      </h1>s
+    <div className="w-full h-screen">
+      <div className="mx-auto w-2/3">
+      <MainPage />
+      </div>
     </div>
   );
 }
