@@ -1,11 +1,15 @@
 import React from 'react'
+import AddToken from '../../Components/AddToken/AddToken'
 import RequestInput from '../../Components/RequestInput/RequestInput'
+import Response from '../../Components/Response/Response'
 
 const MainPage = () => {
 
     return (
-        <div className='border-2 flex justify-between mt-48'>
+        <div className='mt-48'>
             <RequestInput />
+            <AddToken />
+            <Response />
         </div>
     )
 }
