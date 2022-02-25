@@ -1,15 +1,17 @@
-import React from 'react'
+import React, { useRef } from 'react'
 
 const ReequestUrl = () => {
+    const selectRef = useRef()
     const handleClick = () => {
-        alert("İstek atıldı")
+        alert(selectRef.current.value)
     }
     return (
         <div className='flex justify-between border-2'>
-            <select className='text-center p-2'>
+            <select ref={selectRef} className='text-center p-2'>
                 <option value='GET'>GET</option>
                 <option value='POST'>POST</option>
                 <option value='PUT'>PUT</option>
+                <option value='DELETE'>PATCH</option>
                 <option value='DELETE'>DELETE</option>
             </select>
 
