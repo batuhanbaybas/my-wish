@@ -1,14 +1,16 @@
 import React from 'react'
 import AddToken from '../../Components/AddToken/AddToken'
-import RequestInput from '../../Components/RequestInput/RequestInput'
+import RequestBody from '../../Components/RequestBody/RequestBody'
+import ReequestUrl from '../../Components/RequestUrl/RequestUrl'
 import Response from '../../Components/Response/Response'
 
 const MainPage = () => {
 
     return (
         <div className='mt-48'>
-            <RequestInput />
+            <ReequestUrl />
             <AddToken />
+            <RequestBody />
             <Response />
         </div>
     )

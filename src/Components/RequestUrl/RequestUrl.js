@@ -1,6 +1,6 @@
 import React from 'react'
 
-const RequestInput = () => {
+const ReequestUrl = () => {
     const handleClick = () => {
         alert("İstek atıldı")
     }
@@ -19,4 +19,4 @@ const RequestInput = () => {
     )
 }
 
-export default RequestInput
+export default ReequestUrl
