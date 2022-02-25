@@ -8,7 +8,7 @@ const AddToken = () => {
     }
     return (
         <div className='mt-10 flex'>
-            <div className='w-1/6'>
+            <div className='w-[12%]'>
                 <button onClick={handleOpen} className='cursor-pointer border p-3 bg-gray-700  text-white'>oAuth token</button>
             </div>
             {
