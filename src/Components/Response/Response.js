@@ -7,10 +7,13 @@ const Response = () => {
     <div className='mt-10'>
       <div>Response</div>
       <div className='mt-5'>
-      {data.length > 0 &&JSON.stringify(data)}
-
+        {data.length > 0 &&
+          <pre id="json">
+            {JSON.stringify(data, null, 2)}
+          </pre>
+        }
       </div>
-      </div>
+    </div>
   )
 }
 
