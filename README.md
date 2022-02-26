@@ -6,7 +6,7 @@ Free and opensource altarnative of postman for big teams
 
 Manage CRUD operation // for now just GET method available
 
-Defina a oAuth Apı token // in progress
+Define oAuth Apı access token // in progress
 #### Using Techs
 - React for frontend
 - TailwindCss for CSS Library
