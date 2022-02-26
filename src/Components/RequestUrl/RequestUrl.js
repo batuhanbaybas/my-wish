@@ -2,9 +2,6 @@ import React, { useRef } from 'react'
 import { fetchData } from '../../Bloc/fetchData_Bloc'
 
 const ReequestUrl = () => {
-
-
-
     const selectRef = useRef()
     const urlRef = useRef()
 
