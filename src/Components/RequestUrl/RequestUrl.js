@@ -1,19 +1,17 @@
 import React, { useRef } from 'react'
+import { fetchData, resData } from '../../Bloc/fetchData_Bloc'
 
 const ReequestUrl = () => {
+    // const data = resData.use()
+
+
     const selectRef = useRef()
     const urlRef = useRef()
+
+
     const handleClick = () => {
         if (selectRef.current.value === "GET") {
-            fetch(urlRef.current.value, {
-                method: selectRef.current.value,
-                headers: {
-                    "Content-Type": "application/json"
-                    
-                }
-            })
-                .then(res => res.json())
-                .then(res => console.log(res))
+            fetchData(urlRef.current.value, selectRef.current.value)
         } else {
             console.log("diğerleri seçili")
         }
