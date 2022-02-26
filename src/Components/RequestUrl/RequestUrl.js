@@ -1,8 +1,8 @@
 import React, { useRef } from 'react'
-import { fetchData, resData } from '../../Bloc/fetchData_Bloc'
+import { fetchData } from '../../Bloc/fetchData_Bloc'
 
 const ReequestUrl = () => {
-    // const data = resData.use()
+
 
 
     const selectRef = useRef()
