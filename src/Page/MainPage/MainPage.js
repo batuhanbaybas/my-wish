@@ -7,7 +7,7 @@ import Response from '../../Components/Response/Response'
 const MainPage = () => {
 
     return (
-        <div className='mt-48'>
+        <div className='mt-16'>
             <ReequestUrl />
             <AddToken />
             <RequestBody />

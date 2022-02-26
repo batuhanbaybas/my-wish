@@ -22,7 +22,7 @@ const ReequestUrl = () => {
                 <option value='DELETE'>DELETE</option>
             </select>
 
-            <input ref={urlRef} className='w-full outline-none p-1' />
+            <input ref={urlRef} className='w-full outline-none px-2' />
             <button onClick={handleClick} className='bg-slate-300 w-fit px-5' >İSTEK</button>
         </div>
     )
