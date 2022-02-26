@@ -2,8 +2,21 @@ import React, { useRef } from 'react'
 
 const ReequestUrl = () => {
     const selectRef = useRef()
+    const urlRef = useRef()
     const handleClick = () => {
-        alert(selectRef.current.value)
+        if (selectRef.current.value === "GET") {
+            fetch(urlRef.current.value, {
+                method: selectRef.current.value,
+                headers: {
+                    "Content-Type": "application/json"
+                    
+                }
+            })
+                .then(res => res.json())
+                .then(res => console.log(res))
+        } else {
+            console.log("diğerleri seçili")
+        }
     }
     return (
         <div className='flex justify-between border-2'>
@@ -15,7 +28,7 @@ const ReequestUrl = () => {
                 <option value='DELETE'>DELETE</option>
             </select>
 
-            <input className='w-full outline-none p-1' />
+            <input ref={urlRef} className='w-full outline-none p-1' />
             <button onClick={handleClick} className='bg-slate-300 w-fit px-5' >İSTEK</button>
         </div>
     )
