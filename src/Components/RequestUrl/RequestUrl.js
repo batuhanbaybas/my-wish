@@ -10,11 +10,10 @@ const ReequestUrl = () => {
 
 
     const handleClick = () => {
-        if (selectRef.current.value === "GET") {
+        selectRef.current.value === "GET" ?
             fetchData(urlRef.current.value, selectRef.current.value)
-        } else {
-            console.log("diğerleri seçili")
-        }
+            : console.log("diğerleri seçili")
+
     }
     return (
         <div className='flex justify-between border-2'>
