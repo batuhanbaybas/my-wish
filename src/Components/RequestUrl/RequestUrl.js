@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import { fetchData } from '../../Bloc/fetchData_Bloc'
+import { fetchData, sendData } from '../../Bloc/fetchData_Bloc'
 
 const ReequestUrl = () => {
     const selectRef = useRef()
@@ -7,9 +7,9 @@ const ReequestUrl = () => {
 
 
     const handleClick = () => {
-        selectRef.current.value === "GET" ?
+        selectRef.current.value === "GET" || selectRef.current.value === "DELETE" ?
             fetchData(urlRef.current.value, selectRef.current.value)
-            : console.log("diğerleri seçili")
+            : sendData(urlRef.current.value, selectRef.current.value)
 
     }
     return (
@@ -18,7 +18,7 @@ const ReequestUrl = () => {
                 <option value='GET'>GET</option>
                 <option value='POST'>POST</option>
                 <option value='PUT'>PUT</option>
-                <option value='DELETE'>PATCH</option>
+                <option value='PATCH'>PATCH</option>
                 <option value='DELETE'>DELETE</option>
             </select>
 
