@@ -4,7 +4,7 @@ Free and opensource altarnative of postman for big teams
 
 #### What you can do 
 
-Manage CRUD operation // for now just GET method available
+Manage CRUD operation // All method available
 
 Define oAuth Apı access token // in progress
 #### Using Techs
