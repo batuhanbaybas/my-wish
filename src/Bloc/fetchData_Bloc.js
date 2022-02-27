@@ -28,7 +28,7 @@ export const sendData = async (url, method) => {
             "Authorization": `Bearer ${token.get()}`
 
         },
-        body: JSON.stringify(body.get())
+        body: body.get()
     })
         .then(response => response.json())
         .then(data => resData.set(data))
