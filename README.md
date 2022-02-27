@@ -13,7 +13,7 @@ Define oAuth Apı access token // in progress
 - Simpler-State for state management
 
 #### What am ı doing on next level
-- Add POST PUT PATCH and DELETE Method
+- ~~Add POST PUT PATCH and DELETE Method~~
 - Add access-token on API header
 
 
