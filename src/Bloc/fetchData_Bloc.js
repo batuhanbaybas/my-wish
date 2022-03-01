@@ -24,24 +24,32 @@ export const fetchData = async (url, method) => {
             }
             )
     } catch (error) {
-        resError.set(error)
+        resError.set(error);
+        isLoading.set(false)
     }
 
 
 }
 
 export const sendData = async (url, method) => {
-    await fetch(url, {
-        method: method,
-        headers: {
-            "Content-Type": "application/json",
-            "Authorization": `Bearer ${token.get()}`
+    try {
+        await fetch(url, {
+            method: method,
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${token.get()}`
 
-        },
-        body: body.get()
-    })
-        .then(response => response.json())
-        .then(data => resData.set(data))
-        .catch(err => resError.set(err))
+            },
+            body: body.get()
+        })
+            .then(response => response.json())
+            .then(data => resData.set(data))
+
+    } catch (error) {
+        resError.set(error)
+        isLoading.set(false)
+
+    }
+
 
 }
