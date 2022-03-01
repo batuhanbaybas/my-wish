@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
-import { resData, resError } from '../../Bloc/fetchData_Bloc'
+import { isLoading, resData, resError } from '../../Bloc/fetchData_Bloc'
 
 const Response = () => {
   const data = resData.use()
+  const loading = isLoading.use()
   const [open, setOpen] = useState(false)
   const handleOpen = () => {
     open ? setOpen(false) : setOpen(true)
@@ -10,18 +11,19 @@ const Response = () => {
   return (
     <div className='py-10'>
 
-      <div className='cursor-pointer' onClick={handleOpen}>Response</div>
+      <div className='cursor-pointer' onClick={handleOpen}>{`${loading ? "Loading..." : "Response"}`}</div>
       {
         open &&
         <div className='mt-5'>
           {
-            data && (
-              <div className='bg-zinc-700 text-white p-10'>
-                <pre id="json">
-                  {JSON.stringify(data, null, 2)}
-                </pre>
-              </div>
-            )
+            loading ? <div>Loading...</div> :
+              (
+                <div className='bg-zinc-700 text-white p-10'>
+                  <pre id="json">
+                    {JSON.stringify(data, null, 2)}
+                  </pre>
+                </div>
+              )
           }
         </div>
       }
