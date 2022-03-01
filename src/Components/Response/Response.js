@@ -21,8 +21,8 @@ const Response = () => {
               (
                 <div className='bg-zinc-700 text-white p-10'>
                   <pre id="json">
-                    {data && JSON.stringify(data, null, 2)}
-                    {error && JSON.stringify(error, null, 2)}
+                    {data.length > 0  && JSON.stringify(data, null, 2)}
+                    {error && <div className='text-red-600'>Bir şeyler ters gitti!! hatayı konsoldan inceleyebilirsiniz!!!</div>}
                   </pre>
                 </div>
               )
