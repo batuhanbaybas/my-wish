@@ -4,7 +4,7 @@ import Headers from '../Headers/Headers'
 import RequestBody from '../RequestBody/RequestBody'
 
 const TabBar = () => {
-    const [open, setOpen] = useState("")
+    const [open, setOpen] = useState("RequestBody")
 
     return (
         <div className='mt-10 w-full h-full'>
