@@ -12,13 +12,13 @@ const TabBar = () => {
 
                 <div>
                     <CustomBotton function={() => setOpen("Headers")}
-                        className={`cursor-pointer border p-3 ${open === "Headers" ? "bg-white text-gray-700" : "bg-gray-700  text-white"} `}
+                        className={`cursor-pointer border p-3 ${open === "Headers" ? "bg-gray-700 text-white" : "bg-white  text-gray-700 border"} `}
                         innerText="Headers" />
 
                 </div>
                 <div>
                     <CustomBotton function={() => setOpen("RequestBody")}
-                        className={`cursor-pointer border p-3 ${open === "RequestBody" ? "bg-white text-gray-700" : "bg-gray-700  text-white"} `}
+                        className={`cursor-pointer border p-3 ${open === "RequestBody" ? "bg-gray-700 text-white" : "bg-white  text-gray-700 border"} `}
                         innerText="Body" />
 
                 </div>

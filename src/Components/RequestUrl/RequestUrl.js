@@ -8,11 +8,18 @@ const ReequestUrl = () => {
 
 
     const handleClick = () => {
-        selectRef.current.value === "GET" || selectRef.current.value === "DELETE" ?
-            fetchData(urlRef.current.value, selectRef.current.value)
-            : sendData(urlRef.current.value, selectRef.current.value)
-
+        if (urlRef.current.value.trim().length > 0) {
+            selectRef.current.value === "GET" || selectRef.current.value === "DELETE" ?
+                fetchData(urlRef.current.value, selectRef.current.value)
+                : sendData(urlRef.current.value, selectRef.current.value)
+        } else {
+            return alert("Lütfen bir API route u giriniz")
+        }
     }
+
+
+
+
     return (
         <div className='flex justify-between border-2'>
             <select ref={selectRef} className='text-center p-2'>
@@ -24,7 +31,7 @@ const ReequestUrl = () => {
             </select>
 
             <input ref={urlRef} className='w-full outline-none px-2' />
-            <CustomBotton function={handleClick} className="bg-slate-300 w-fit px-5" innerText="İSTEK" />
+            <CustomBotton function={handleClick} className="bg-slate-300 w-fit px-5 flex justify-center items-center cursor-pointer  hover:bg-slate-700 hover:text-white" innerText="İSTEK" />
         </div>
     )
 }

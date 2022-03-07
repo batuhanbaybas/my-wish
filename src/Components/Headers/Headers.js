@@ -19,7 +19,7 @@ const Headers = () => {
     return (
         <div className='flex mt-10'>
             <div className='w-[12%]'>
-                <CustomBotton className='cursor-pointer border p-3 bg-gray-700  text-white' function={handleOpen} innerText={"Token"} />
+                <CustomBotton className='cursor-pointer border p-3 bg-gray-700  text-white w-20 flex items-center justify-center' function={handleOpen} innerText={"Token"} />
 
             </div>
             {
