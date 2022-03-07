@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { body } from '../../Bloc/fetchData_Bloc'
+import CustomBotton from '../Button/CutomButton'
 
 
 const RequestBody = () => {
@@ -14,7 +15,7 @@ const RequestBody = () => {
     }
     return (
         <div className='mt-10'>
-            <div className='text-xl cursor-pointer ' onClick={handleOpen}> Body Ekle </div>
+            <CustomBotton function={handleOpen} className="p-3 cursor-pointer" innerText="Body Ekle" />
             {
                 open &&
                 <textarea value={value} onChange={(e) => handleChange(e)} rows={8} className='p-3 border outline-none border-cyan-900 w-full mt-5 ' />

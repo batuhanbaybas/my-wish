@@ -1,5 +1,6 @@
 import React, { useRef } from 'react'
 import { fetchData, sendData } from '../../Bloc/fetchData_Bloc'
+import CustomBotton from '../Button/CutomButton'
 
 const ReequestUrl = () => {
     const selectRef = useRef()
@@ -23,7 +24,7 @@ const ReequestUrl = () => {
             </select>
 
             <input ref={urlRef} className='w-full outline-none px-2' />
-            <button onClick={handleClick} className='bg-slate-300 w-fit px-5' >İSTEK</button>
+            <CustomBotton function={handleClick} className="bg-slate-300 w-fit px-5" innerText="İSTEK" />
         </div>
     )
 }

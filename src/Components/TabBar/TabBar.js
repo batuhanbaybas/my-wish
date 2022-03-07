@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import CustomBotton from '../Button/CutomButton'
 import Headers from '../Headers/Headers'
 import RequestBody from '../RequestBody/RequestBody'
 
@@ -10,16 +11,16 @@ const TabBar = () => {
             <div className='flex'>
 
                 <div>
-                    <button onClick={() => setOpen("Headers")}
-                        className={`cursor-pointer border p-3 ${open === "Headers" ? "bg-white text-gray-700" : "bg-gray-700  text-white"} `}>
-                        Headers
-                    </button>
+                    <CustomBotton function={() => setOpen("Headers")}
+                        className={`cursor-pointer border p-3 ${open === "Headers" ? "bg-white text-gray-700" : "bg-gray-700  text-white"} `}
+                        innerText="Headers" />
+
                 </div>
                 <div>
-                    <button onClick={() => setOpen("RequestBody")}
-                        className={`cursor-pointer border p-3 ${open === "RequestBody" ? "bg-white text-gray-700" : "bg-gray-700  text-white"} `}>
-                        Body
-                    </button>
+                    <CustomBotton function={() => setOpen("RequestBody")}
+                        className={`cursor-pointer border p-3 ${open === "RequestBody" ? "bg-white text-gray-700" : "bg-gray-700  text-white"} `}
+                        innerText="Body" />
+
                 </div>
             </div>
             <div>
@@ -35,7 +36,6 @@ const TabBar = () => {
 
             </div>
         </div>
-
     )
 }
 
