@@ -1,6 +1,6 @@
 import { entity } from "simpler-state"
 
-export const resData = entity([])
+export const resData = entity(null)
 export const resError = entity("")
 export const body = entity([])
 export const token = entity('')
