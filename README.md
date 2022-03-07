@@ -1,6 +1,5 @@
 ## Live On 
-https://62250d514d5d6d47d0eca355--make-wish.netlify.app/
-
+https://make-wishes-example.netlify.app/
 ### What's the main goal 
 
 Free and opensource altarnative of postman for big teams
