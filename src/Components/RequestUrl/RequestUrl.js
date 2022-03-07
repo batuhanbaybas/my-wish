@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import { fetchData, sendData } from '../../Bloc/fetchData_Bloc'
-import CustomBotton from '../Button/CutomButton'
+import CustomBotton from '../Button/CustomButton'
 
 const ReequestUrl = () => {
     const selectRef = useRef()

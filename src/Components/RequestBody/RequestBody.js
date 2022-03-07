@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { body } from '../../Bloc/fetchData_Bloc'
-import CustomBotton from '../Button/CutomButton'
+import CustomBotton from '../Button/CustomButton'
 
 
 const RequestBody = () => {

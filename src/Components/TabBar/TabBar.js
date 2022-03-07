@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import CustomBotton from '../Button/CutomButton'
+import CustomBotton from '../Button/CustomButton'
 import Headers from '../Headers/Headers'
 import RequestBody from '../RequestBody/RequestBody'
 
