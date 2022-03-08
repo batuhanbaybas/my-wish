@@ -11,14 +11,15 @@ const RequestBody = () => {
     }
     const handleChange = (e) => {
         setValue(e.target.value)
-        body.set(e.target.value)
+        body.set(JSON.stringify(value))
+
     }
     return (
         <div className='mt-10'>
             <CustomBotton function={handleOpen} className="p-3 cursor-pointer" innerText="Body Ekle" />
             {
                 open &&
-                <textarea  value={value} onChange={(e) => handleChange(e)} rows={8} className='p-3 border outline-none border-cyan-900 w-full mt-5 ' />
+                <textarea value={value} onChange={(e) => handleChange(e)} rows={8} className='p-3 border outline-none border-cyan-900 w-full mt-5 ' />
             }
         </div>
     )
