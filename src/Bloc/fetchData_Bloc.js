@@ -2,7 +2,7 @@ import axios from "axios"
 import { entity } from "simpler-state"
 
 export const resData = entity(null)
-export const resError = entity("")
+export const resError = entity(false)
 export const body = entity(null)
 export const token = entity('')
 export const isLoading = entity(false)
@@ -48,7 +48,7 @@ export const sendData = async (url, method) => {
         isLoading.set(false)
     }
     catch (error) {
-        resError.set(error.response.data)
+        resError.set(true)
         isLoading.set(false)
     }
 
