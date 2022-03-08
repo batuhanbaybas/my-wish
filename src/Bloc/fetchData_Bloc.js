@@ -3,7 +3,7 @@ import { entity } from "simpler-state"
 
 export const resData = entity(null)
 export const resError = entity("")
-export const body = entity({})
+export const body = entity(null)
 export const token = entity('')
 export const isLoading = entity(false)
 
@@ -32,7 +32,7 @@ export const fetchData = async (url, method) => {
 
 export const sendData = async (url, method) => {
     isLoading.set(true)
-    console.log(typeof body.get())
+    console.log(typeof body.get(), body.get())
     try {
         const response = await axios({
             method: method,

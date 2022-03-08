@@ -11,7 +11,7 @@ const RequestBody = () => {
     }
     const handleChange = (e) => {
         setValue(e.target.value)
-        body.set(JSON.stringify(value))
+        body.set(value)
 
     }
     return (
